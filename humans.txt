@@ -1,0 +1,17 @@
+/* TEAM */
+Owner: Bill Speers
+Contact: https://www.linkedin.com/in/billspeers/
+Location: Farmingdale, NJ, USA
+
+Co-author: ChatGPT ("Reed")
+Role: Editing, structure, code assistance
+
+/* SITE */
+Last update: 2026-01-26
+Standards: HTML5, CSS3
+Hosting: Cloudflare Pages
+Source: GitHub (private/public repo)
+Style: Web 1.0-inspired technical directory
+
+/* THANKS */
+To everyone who documents their work clearly.

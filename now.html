@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bill Speers | Now</title>
+  <meta name="description" content="Bill Speers — personal projects, labs, and writing." />
+    <link rel="canonical" href="https://billspeers.com/now.html" />
+<style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #444444;
+      --line: #bfbfbf;
+      --link: #0033cc;
+      --linkv: #551a8b;
+      --chipbg: #f2f2f2;
+      --chipbd: #d0d0d0;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    html, body { background: var(--bg); color: var(--fg); }
+    body { margin: 0; font-family: var(--sans); line-height: 1.55; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 60px; }
+    header { border: 1px solid var(--line); padding: 16px 14px; }
+    h1 { margin: 0; font-size: 30px; letter-spacing: 0.2px; }
+    .subtitle { margin: 6px 0 0; color: var(--muted); }
+    .meta { margin-top: 8px; font-family: var(--mono); font-size: 13px; color: var(--muted); }
+    a { color: var(--link); }
+    a:visited { color: var(--linkv); }
+    a:hover { text-decoration: none; }
+    .section { margin-top: 22px; border: 1px solid var(--line); padding: 16px 14px; }
+    .section h2 { margin: 0 0 10px; font-size: 18px; }
+    .section p { margin: 8px 0; }
+    .quicklinks { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 0; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 10px; border: 1px solid var(--chipbd);
+      background: var(--chipbg); border-radius: 6px;
+      text-decoration: none; font-family: var(--mono);
+      font-size: 13px; color: var(--fg);
+    }
+    .btn:hover { filter: brightness(0.98); }
+    .mono { font-family: var(--mono); }
+    .tree {
+      font-family: var(--mono); font-size: 13px; white-space: pre;
+      background: #fafafa; border: 1px dashed var(--line);
+      padding: 12px; overflow-x: auto; margin-top: 10px;
+    }
+    ul { margin: 8px 0 0 18px; }
+    li { margin: 6px 0; }
+    .foot { margin-top: 18px; font-family: var(--mono); color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Bill Speers</h1>
+      <div class="subtitle">IT Leader • Solutions Architect • Cloud &amp; Security</div>
+      <div class="meta">LinkedIn: <a href="https://www.linkedin.com/in/billspeers/" target="_blank" rel="noreferrer">linkedin.com/in/billspeers</a></div>
+      <div class="quicklinks" aria-label="Site navigation">
+        <a class="btn" href="./index.html">🏠 Home</a>
+        <a class="btn" href="./now.html" aria-current="page"><b>🕒 Now</b></a>
+        <a class="btn" href="./projects.html" aria-current="page"><b>🧠 Projects</b></a>
+        <a class="btn" href="./labs.html">🧪 Labs</a>
+        <a class="btn" href="./writing.html">✍️ Writing</a>
+        <a class="btn" href="./resume.html">📄 Resume</a>
+        <a class="btn" href="https://www.linkedin.com/in/billspeers/" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
+      </div>
+    </header>
+
+
+    
+    <section class="section">
+      <h2>🕒 Now</h2>
+      <p class="mono">/now</p>
+      <p>
+        This page is a lightweight “status” page — what I’m building, learning, and tightening up right now.
+        It’s intentionally short, practical, and updated as work shifts.
+      </p>
+
+      <h3>🔧 Current focus</h3>
+      <ul>
+        <li>🧠 Expanding this site into a clean technical directory (projects/labs/writing) with strong documentation.</li>
+        <li>🛡️ Deepening security architecture writeups: identity-first controls, baselines, and operational runbooks.</li>
+        <li>☁️ Cloud &amp; identity modernization patterns (Microsoft 365 / Entra ID / Intune) with repeatable checklists.</li>
+        <li>🧪 Home lab validation: segmentation, firewall policy, and recovery drills (prove it, then document it).</li>
+      </ul>
+
+      <h3>📌 Next adds</h3>
+      <ul>
+        <li>✅ Add a few short “case study” writeups (1–2 pages each) with diagrams later.</li>
+        <li>✅ Add an RSS feed for writing updates.</li>
+        <li>✅ Add a lightweight global counter (Cloudflare Worker + KV) if desired.</li>
+      </ul>
+
+      <p class="kicker">Last updated: 2026-01-26</p>
+      <p class="foot">Want to connect? Please reach out via <a href="https://www.linkedin.com/in/billspeers/" target="_blank" rel="noreferrer">LinkedIn</a>.</p>
+    </section>
+
+
+
+    <div class="foot">© <span id="y"></span> Bill Speers • Built for Cloudflare Pages</div>
+  
+<div class="foot">
+  <p>📫 Contact: Please reach out via <a href="https://www.linkedin.com/in/billspeers/" target="_blank" rel="noreferrer">LinkedIn</a>.</p>
+  <p>🤝 Co-authored with ChatGPT (“Reed”).</p>
+  <p class="kicker">Last updated: 2026-01-26</p>
+  <p class="kicker">Visitor count: <span id="counter">—</span></p>
+</div>
+
+<script>
+  const key = "billspeers_site_counter";
+  let count = localStorage.getItem(key);
+  if (!count) { count = 0; }
+  count = parseInt(count) + 1;
+  localStorage.setItem(key, count);
+  document.getElementById("counter").textContent = count;
+</script>
+
+</main>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+
+  <script>
+    (function () {
+      try {
+        const k = "billspeers_site_visits";
+        const n = (parseInt(localStorage.getItem(k) || "0", 10) || 0) + 1;
+        localStorage.setItem(k, String(n));
+        const el = document.getElementById("visitCount");
+        if (el) el.textContent = String(n);
+      } catch (e) {
+        const el = document.getElementById("visitCount");
+        if (el) el.textContent = "—";
+      }
+    })();
+  </script>
+
+</body>
+</html>

@@ -3,99 +3,253 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bobby Speers | IT Leader & Solutions Architect</title>
-  <meta name="description" content="Personal brand site for Bobby Speers — IT leadership, cloud, security, and consulting." />
-  <style>
-    :root { --fg:#111827; --muted:#6b7280; --card:#ffffff; --line:#e5e7eb; --bg:#f9fafb; }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--fg)}
-    a{color:inherit}
-    .wrap{max-width:980px;margin:0 auto;padding:56px 18px}
-    .top{display:flex;gap:16px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
-    .pill{display:inline-flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-    .pill a{border:1px solid var(--line);background:var(--card);padding:10px 12px;border-radius:999px;text-decoration:none}
-    .grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:18px}
-    @media(min-width:860px){.grid{grid-template-columns:1.15fr .85fr}}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
-    h1{font-size:34px;line-height:1.1;margin:0}
-    h2{font-size:16px;margin:0 0 10px}
-    p{margin:10px 0;color:var(--muted);line-height:1.55}
-    ul{margin:10px 0 0 18px;color:var(--muted);line-height:1.6}
-    .tagline{font-size:15px}
-    .kpi{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-    .kpi span{border:1px solid var(--line);background:var(--bg);padding:8px 10px;border-radius:12px;font-size:13px;color:var(--muted)}
-    footer{margin-top:18px;color:var(--muted);font-size:12px}
+  <title>Bill Speers | Projects, Labs, Writing</title>
+  <meta name="description" content="Bill Speers — personal projects, labs, and writing. Web 1.0-inspired directory with modern readability." />
+
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bill Speers | Projects, Labs, Writing" />
+  <meta property="og:description" content="Bill Speers — personal projects, labs, and writing. Web 1.0-inspired directory with modern readability." />
+  <meta property="og:url" content="./index.html" />
+  <meta name="twitter:card" content="summary" />
+
+<style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #444444;
+      --line: #bfbfbf;
+      --link: #0033cc;
+      --linkv: #551a8b;
+      --chipbg: #f2f2f2;
+      --chipbd: #d0d0d0;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    html, body { background: var(--bg); color: var(--fg); }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      line-height: 1.55;
+    }
+
+    .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 60px; }
+
+    /* Web 1.0 nods: simple, left-aligned, restrained */
+    header { border: 1px solid var(--line); padding: 16px 14px; }
+    h1 { margin: 0; font-size: 30px; letter-spacing: 0.2px; }
+    .subtitle { margin: 6px 0 0; color: var(--muted); }
+    .meta { margin-top: 8px; font-family: var(--mono); font-size: 13px; color: var(--muted); }
+
+    a { color: var(--link); }
+    a:visited { color: var(--linkv); }
+    a:hover { text-decoration: none; }
+
+    .section { margin-top: 22px; border: 1px solid var(--line); padding: 16px 14px; }
+    .section h2 { margin: 0 0 10px; font-size: 18px; }
+    .section p { margin: 8px 0; }
+
+    .quicklinks {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 10px 0 0;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border: 1px solid var(--chipbd);
+      background: var(--chipbg);
+      border-radius: 6px;
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--fg);
+    }
+    .btn:hover { filter: brightness(0.98); }
+
+    .tree {
+      font-family: var(--mono);
+      font-size: 13px;
+      white-space: pre;
+      background: #fafafa;
+      border: 1px dashed var(--line);
+      padding: 12px;
+      overflow-x: auto;
+      margin-top: 10px;
+    }
+
+    ul { margin: 8px 0 0 18px; }
+    li { margin: 6px 0; }
+
+    .foot {
+      margin-top: 18px;
+      font-family: var(--mono);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    
+    .kicker{color:var(--muted);font-family:var(--mono);font-size:13px;}
+/* anchor offset for in-page nav */
+    .anchor { scroll-margin-top: 14px; }
   </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "#bill-speers",
+      "name": "Bill Speers",
+      "alternateName": [
+        "William Speers",
+        "William (Bill) Speers"
+      ],
+      "jobTitle": [
+        "Solutions Architect",
+        "Technology Leader",
+        "Security & Cloud"
+      ],
+      "url": "./index.html",
+      "sameAs": [
+        "https://www.linkedin.com/in/billspeers/"
+      ],
+      "knowsAbout": [
+        "Cloud computing",
+        "Cybersecurity",
+        "Identity and access management",
+        "Microsoft 365",
+        "Microsoft Azure",
+        "Microsoft Intune",
+        "Zero trust architecture",
+        "Network security",
+        "VLAN",
+        "VPN",
+        "Disaster recovery"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "#website",
+      "name": "Bill Speers \u2014 Projects, Labs, Writing",
+      "url": "./index.html",
+      "publisher": {
+        "@id": "#bill-speers"
+      }
+    }
+  ]
+}
+  </script>
 </head>
+
 <body>
   <main class="wrap">
-    <section class="card">
-      <div class="top">
-        <div>
-          <h1>Bobby Speers</h1>
-          <p class="tagline">IT Leader • Solutions Architect • Cloud & Security</p>
-          <div class="pill">
-            <a href="mailto:you@example.com">Email</a>
-            <a href="https://www.linkedin.com/in/YOURHANDLE" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://github.com/YOURHANDLE" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="/resume.pdf">Resume (PDF)</a>
-          </div>
-          <div class="kpi">
-            <span>Microsoft 365 / Entra / Intune</span>
-            <span>Security & MDR/MSSP</span>
-            <span>Networking & Firewalls</span>
-            <span>Architecture & Delivery</span>
-          </div>
-        </div>
-      </div>
+    <header>
+      <h1>Bill Speers</h1>
+      <div class="subtitle">IT Leader • Solutions Architect • Cloud & Security</div>
+      <div class="meta">LinkedIn: <a href="https://www.linkedin.com/in/billspeers/" target="_blank" rel="noreferrer">linkedin.com/in/billspeers</a></div>
+    </header>
+
+    <section class="section" id="summary">
+      <h2 class="anchor">Professional Summary</h2>
+      <p>
+        Experienced IT leader and solutions architect focused on building, securing, and modernizing cloud,
+        identity, and infrastructure environments. This site serves as a living index of projects, labs,
+        and work in progress.
+      </p>
     </section>
 
-    <section class="grid">
-      <div class="card">
-        <h2>About</h2>
-        <p>
-          I help organizations modernize IT with secure identity, endpoint management, cloud services,
-          and pragmatic architecture that improves reliability and reduces risk.
-        </p>
+    <section class="section" id="index">
+      <h2 class="anchor">📁 Index / Directory</h2>
+      <p>A simple, web 1.0-inspired directory of personal projects, labs, and writing.</p>
+      <p class="kicker">Concepts: <a href="https://en.wikipedia.org/wiki/Cloud_computing" target="_blank" rel="noreferrer">Cloud computing</a> • <a href="https://en.wikipedia.org/wiki/Computer_security" target="_blank" rel="noreferrer">Cybersecurity</a> • <a href="https://en.wikipedia.org/wiki/Identity_management" target="_blank" rel="noreferrer">Identity management</a> • <a href="https://en.wikipedia.org/wiki/Zero_trust_architecture" target="_blank" rel="noreferrer">Zero trust architecture</a></p>
 
-        <h2 style="margin-top:14px;">Highlights</h2>
-        <ul>
-          <li>Consultative solutions architecture across SMB/mid-market environments</li>
-          <li>Microsoft 365/Entra ID/Intune modernization and endpoint strategy</li>
-          <li>Security hardening: MFA, PAM, email security, firewall/VPN, monitoring</li>
-          <li>Clear documentation, stakeholder communication, and reliable delivery</li>
-        </ul>
-
-        <h2 style="margin-top:14px;">Selected Projects</h2>
-        <ul>
-          <li><b>Technology Farm</b> — home-lab environment: AD, Hyper-V, segmentation, security tooling</li>
-          <li><b>M365 Security Baseline</b> — MFA/Conditional Access, hardening, audit improvements</li>
-          <li><b>Migration & Cleanup</b> — tenant standardization, device policy, access controls</li>
-        </ul>
+      <div class="quicklinks" aria-label="Quick links">
+        <a class="btn" href="#projects">🧠 Projects</a>
+        <a class="btn" href="#labs">🧪 Labs</a>
+        <a class="btn" href="#writing">✍️ Writing</a>
+        <a class="btn" href="#resume">📄 Resume</a>
+        <a class="btn" href="https://www.linkedin.com/in/billspeers/" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
       </div>
 
-      <aside class="card">
-        <h2>Core Skills</h2>
-        <ul>
-          <li>Azure / Microsoft 365 / Exchange / Teams</li>
-          <li>Entra ID, Conditional Access, MFA, SSO</li>
-          <li>Intune device management & configuration</li>
-          <li>Network/security: WatchGuard, pfSense, Cisco</li>
-          <li>Backup/DR, monitoring, MSP tooling</li>
-        </ul>
+      <div class="tree" role="textbox" aria-label="Directory tree">
+/index
+├── 🧠 projects
+│   ├── Technology Farm – TechnologyFarming.com
+│   ├── Security Baselines
+│   └── Cloud & Identity Migrations
+├── 🧪 labs
+│   ├── <a href="https://en.wikipedia.org/wiki/Active_Directory" target="_blank" rel="noreferrer">Active Directory</a> & Entra ID
+│   ├── Intune & Endpoint Testing
+│   └── Network Segmentation
+├── ✍️ writing
+│   ├── Architecture Notes
+│   ├── Runbooks
+│   └── Security Reviews
+└── 📄 resume
+      </div>
 
-        <h2 style="margin-top:14px;">Contact</h2>
-        <p>For consulting, leadership roles, or collaborations:</p>
-        <ul>
-          <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/YOURHANDLE" target="_blank" rel="noreferrer">/in/YOURHANDLE</a></li>
-        </ul>
-
-        <footer>© <span id="y"></span> Bobby Speers</footer>
-      </aside>
+      <div class="foot">Tip: this is intentionally “web 1.0” in spirit—simple nav, fast load, zero fluff.</div>
     </section>
+
+    <section class="section" id="projects">
+      <h2 class="anchor">🧠 Projects &amp; Case Studies</h2>
+      <ul>
+        <li><b>Technology Farming</b> – Personal home-lab environment for identity, networking, security, and automation of a 1 Acre Chicken Farm.</li>
+        <li><b>Security Baselines</b> – <a href="https://en.wikipedia.org/wiki/Microsoft_365" target="_blank" rel="noreferrer">Microsoft 365</a> / <a href="https://en.wikipedia.org/wiki/Microsoft_Entra" target="_blank" rel="noreferrer">Entra ID</a> hardening, MFA, Conditional Access.</li>
+        <li><b>Cloud &amp; Identity Migrations</b> – Tenant migrations, cleanup, and standardization.</li>
+        <li><b>Network &amp; Firewall Design</b> – Segmentation, VPNs, monitoring, and security controls.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="labs">
+      <h2 class="anchor">🧪 Labs &amp; Home Lab</h2>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Active_Directory" target="_blank" rel="noreferrer">Active Directory</a> and <a href="https://en.wikipedia.org/wiki/Microsoft_Entra" target="_blank" rel="noreferrer">Entra ID</a> hybrid scenarios</li>
+        <li><a href="https://en.wikipedia.org/wiki/Microsoft_Intune" target="_blank" rel="noreferrer">Intune</a> device enrollment and policy testing</li>
+        <li><a href="https://en.wikipedia.org/wiki/Virtual_LAN" target="_blank" rel="noreferrer">VLAN</a> segmentation and firewall rule validation</li>
+        <li>Backup, disaster recovery, and recovery simulations</li>
+      </ul>
+    </section>
+
+    <section class="section" id="writing">
+      <h2 class="anchor">✍️ Writing &amp; Documentation</h2>
+      <ul>
+        <li>Architecture diagrams and technical documentation</li>
+        <li>Runbooks and operational procedures</li>
+        <li>Security reviews and risk assessments</li>
+      </ul>
+    </section>
+
+    <section class="section" id="skills">
+      <h2 class="anchor">🛠️ Core Competencies</h2>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Microsoft_365" target="_blank" rel="noreferrer">Microsoft 365</a>, <a href="https://en.wikipedia.org/wiki/Microsoft_Entra" target="_blank" rel="noreferrer">Entra ID</a> (<a href="https://en.wikipedia.org/wiki/Azure_Active_Directory" target="_blank" rel="noreferrer">Azure AD</a>), Exchange, Teams</li>
+        <li><a href="https://en.wikipedia.org/wiki/Microsoft_Intune" target="_blank" rel="noreferrer">Intune</a> device management and endpoint security</li>
+        <li>Identity, MFA, Conditional Access, <a href="https://en.wikipedia.org/wiki/Privileged_access_management" target="_blank" rel="noreferrer">PAM</a></li>
+        <li>Network &amp; firewall platforms (<a href="https://en.wikipedia.org/wiki/WatchGuard" target="_blank" rel="noreferrer">WatchGuard</a>, <a href="https://en.wikipedia.org/wiki/PfSense" target="_blank" rel="noreferrer">pfSense</a>, <a href="https://en.wikipedia.org/wiki/Cisco" target="_blank" rel="noreferrer">Cisco</a>)</li>
+        <li>Architecture, documentation, and stakeholder engagement</li>
+      </ul>
+    </section>
+
+    <section class="section" id="resume">
+      <h2 class="anchor">📄 Resume</h2>
+      <p>See the full resume page here:</p>
+      <p><a class="btn" href="./resume.html">📄 Open Resume</a></p>
+    </section>
+
+    <div class="foot">
+      © <span id="y"></span> Bill Speers • Built for Cloudflare Pages
+    </div>
   </main>
 
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

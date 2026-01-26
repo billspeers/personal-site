@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bill Speers | Projects</title>
+  <meta name="description" content="Bill Speers — personal projects, labs, and writing." />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #444444;
+      --line: #bfbfbf;
+      --link: #0033cc;
+      --linkv: #551a8b;
+      --chipbg: #f2f2f2;
+      --chipbd: #d0d0d0;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    html, body { background: var(--bg); color: var(--fg); }
+    body { margin: 0; font-family: var(--sans); line-height: 1.55; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 60px; }
+    header { border: 1px solid var(--line); padding: 16px 14px; }
+    h1 { margin: 0; font-size: 30px; letter-spacing: 0.2px; }
+    .subtitle { margin: 6px 0 0; color: var(--muted); }
+    .meta { margin-top: 8px; font-family: var(--mono); font-size: 13px; color: var(--muted); }
+    a { color: var(--link); }
+    a:visited { color: var(--linkv); }
+    a:hover { text-decoration: none; }
+    .section { margin-top: 22px; border: 1px solid var(--line); padding: 16px 14px; }
+    .section h2 { margin: 0 0 10px; font-size: 18px; }
+    .section p { margin: 8px 0; }
+    .quicklinks { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 0; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 10px; border: 1px solid var(--chipbd);
+      background: var(--chipbg); border-radius: 6px;
+      text-decoration: none; font-family: var(--mono);
+      font-size: 13px; color: var(--fg);
+    }
+    .btn:hover { filter: brightness(0.98); }
+    .mono { font-family: var(--mono); }
+    .tree {
+      font-family: var(--mono); font-size: 13px; white-space: pre;
+      background: #fafafa; border: 1px dashed var(--line);
+      padding: 12px; overflow-x: auto; margin-top: 10px;
+    }
+    ul { margin: 8px 0 0 18px; }
+    li { margin: 6px 0; }
+    .foot { margin-top: 18px; font-family: var(--mono); color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Bill Speers</h1>
+      <div class="subtitle">IT Leader • Solutions Architect • Cloud &amp; Security</div>
+      <div class="meta">LinkedIn: <a href="https://www.linkedin.com/in/billspeers/" target="_blank" rel="noreferrer">linkedin.com/in/billspeers</a></div>
+      <div class="quicklinks" aria-label="Site navigation">
+        <a class="btn" href="./index.html">🏠 Home</a>
+        <a class="btn" href="./projects.html" aria-current="page"><b>🧠 Projects</b></a>
+        <a class="btn" href="./labs.html">🧪 Labs</a>
+        <a class="btn" href="./writing.html">✍️ Writing</a>
+        <a class="btn" href="./resume.html">📄 Resume</a>
+        <a class="btn" href="https://www.linkedin.com/in/billspeers/" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
+      </div>
+    </header>
+
+
+    <section class="section">
+      <h2>🧠 Projects &amp; Case Studies</h2>
+      <p class="mono">/projects</p>
+      <div class="tree">/projects
+├── Technology Farm – TechnologyFarming.com
+├── Security Baselines
+├── Cloud &amp; Identity Migrations
+└── Network &amp; Firewall Design</div>
+
+      <h3>Technology Farm – TechnologyFarming.com</h3>
+      <ul>
+        <li>Personal home-lab environment for identity, networking, security, and automation of a 1 Acre Chicken Farm.</li>
+        <li>Focus areas: AD/Entra, VLAN segmentation, firewalling, endpoint management, monitoring, backups.</li>
+        <li>Notes: this will evolve into deeper writeups and diagrams.</li>
+      </ul>
+
+      <h3>Security Baselines</h3>
+      <ul>
+        <li>Microsoft 365 / Entra ID hardening: MFA, Conditional Access, least privilege, secure defaults.</li>
+        <li>Email security and identity protection patterns for real-world environments.</li>
+      </ul>
+
+      <h3>Cloud &amp; Identity Migrations</h3>
+      <ul>
+        <li>Tenant migrations, cleanup, and standardization (accounts, devices, policies, access).</li>
+        <li>Repeatable checklists and “what I’d do differently” notes.</li>
+      </ul>
+
+      <h3>Network &amp; Firewall Design</h3>
+      <ul>
+        <li>Segmentation, VPNs, monitoring, and security controls.</li>
+        <li>Lab-driven validation: rules, NAT, logs, and troubleshooting notes.</li>
+      </ul>
+
+      <p class="foot">Next: we can add separate subpages like <span class="mono">/projects/technology-farm.html</span> when you’re ready.</p>
+    </section>
+
+
+    <div class="foot">© <span id="y"></span> Bill Speers • Built for Cloudflare Pages</div>
+  </main>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
